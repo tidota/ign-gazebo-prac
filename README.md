@@ -4,5 +4,9 @@ This repository is just my personal practice for Ignition Gazebo.
 https://ignitionrobotics.org/libs/gazebo
 
 The simulator is run with ROS.
-[ROS Integration](https://ignitionrobotics.org/docs/blueprint/ros_integration)
+[ROS Integration](https://ignitionrobotics.org/docs/citadel/ros_integration)
+
+```
+rosrun ros_ign_gazebo ign_gazebo -r camera_sensor.sdf
+```
 
