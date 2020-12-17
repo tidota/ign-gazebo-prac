@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- start ignition gazebo gui -->
+  <node pkg="ros_ign_gazebo" type="ign_gazebo" name="ign_gazebo_gui" output="screen" args="-g"/>
+</launch>

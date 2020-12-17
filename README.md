@@ -10,3 +10,5 @@ The simulator is run with ROS.
 rosrun ros_ign_gazebo ign_gazebo -r camera_sensor.sdf
 ```
 
+[ros\_ign\_gazebo](https://github.com/ignitionrobotics/ros_ign/tree/melodic/ros_ign_gazebo)
+
