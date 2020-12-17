@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <launch>
+  <arg name="sdf" default="camera_sensor.sdf"/>
   <!-- start ignition gazebo server -->
-  <node pkg="ros_ign_gazebo" type="ign_gazebo" name="ign_gazebo_server" output="screen" args="-s -r camera_sensor.sdf"/>
+  <node pkg="ros_ign_gazebo" type="ign_gazebo" name="ign_gazebo_server" output="screen" args="-s -r $(arg sdf)"/>
 </launch>

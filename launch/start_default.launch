@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
 <launch>
+  <arg name="sdf" default="camera_sensor.sdf"/>
   <!-- start both server and gui -->
   <!--<node pkg="ros_ign_gazebo" type="ign_gazebo" name="ign_gazebo" output="screen" args="-r camera_sensor.sdf"/>-->
 
   <!-- start ignition gazebo server -->
-  <include file="$(find ign_gazebo_prac)/launch/start_server.launch"/>
+  <include file="$(find ign_gazebo_prac)/launch/start_server.launch">
+    <arg name="sdf" value="$(arg sdf)"/>
+  </include>
 
   <!-- start ignition gazebo gui -->
   <include file="$(find ign_gazebo_prac)/launch/start_gui.launch"/>
