@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <launch>
+  <env name="IGN_GAZEBO_RESOURCE_PATH" value="$(env HOME)/.ignition/models"/>
+
   <arg name="sdf" default="camera_sensor.sdf"/>
   <!-- start ignition gazebo server -->
   <node pkg="ros_ign_gazebo" type="ign_gazebo" name="ign_gazebo_server" output="screen" args="-s -r $(arg sdf)"/>

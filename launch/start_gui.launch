@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <launch>
+  <env name="IGN_GAZEBO_RESOURCE_PATH" value="$(env HOME)/.ignition/models"/>
+
   <!-- start ignition gazebo gui -->
   <node pkg="ros_ign_gazebo" type="ign_gazebo" name="ign_gazebo_gui" output="screen" args="-g"/>
 </launch>
