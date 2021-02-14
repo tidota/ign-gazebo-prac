@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <launch>
   <arg name="sdf" default="$(find ign_gazebo_prac)/world/indian_tunnel.sdf"/>
+  <arg name="headless" default="false"/>
 
   <!-- start ignition gazebo server -->
   <include file="$(find ign_gazebo_prac)/launch/start_server.launch">
@@ -8,5 +9,7 @@
   </include>
 
   <!-- start ignition gazebo gui -->
-  <include file="$(find ign_gazebo_prac)/launch/start_gui.launch"/>
+  <group unless="$(arg headless)">
+    <include file="$(find ign_gazebo_prac)/launch/start_gui.launch"/>
+  </group>
 </launch>
