@@ -22,6 +22,20 @@ It is possible by setting `IGN_GAZEBO_RESOURCE_PATH` to the directory holding th
 For example, if it is set to `$(env HOME)/.gazebo/models`, Ignition Gazebo will be able to use the same models that Gazebo classic is also using.
 Another way is to make `models` directory under `~/.ignition` and set `IGN_GAZEBO_RESOURCE_PATH` to `$(env HOME)/.ignition/models` as this repository does.
 
+## To replace a word in multiple files
+
+_Because it is a burdensome to replace each package name with another in several files._
+
+```
+find . -type f -exec sed -i 's/mav_tunnel_nav/ign_gazebo_prac/g' {} \;
+```
+
+## To spawn a model from ROS param
+
+```
+rosrun ros_ign_gazebo create -world indian_tunnel -param robot_description
+```
+
 # Network settings for multiple machines
 
 If the server is running on a remote machine, some environment variables must be set.

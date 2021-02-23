@@ -3,6 +3,18 @@
   <arg name="sdf" default="$(find ign_gazebo_prac)/world/indian_tunnel.sdf"/>
   <arg name="headless" default="false"/>
 
+  <!-- robot description -->
+  <param name="robot_description" command="
+    $(find xacro)/xacro '$(find ign_gazebo_prac)/urdf/iris/iris_depthcam.xacro'
+    enable_logging:=false
+    enable_ground_truth:=false
+    enable_mavlink_interface:=false
+    log_file:=robot1
+    wait_to_record_bag:=false
+    mav_name:=robot1
+    namespace:=robot1"
+  />
+
   <!-- start ignition gazebo server -->
   <include file="$(find ign_gazebo_prac)/launch/start_server.launch">
     <arg name="sdf" value="$(arg sdf)"/>

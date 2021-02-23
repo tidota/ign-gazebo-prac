@@ -3,7 +3,7 @@
 <robot name="iris" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:include filename="$(find rotors_description)/urdf/component_snippets.xacro" />
   <!-- Instantiate iris "mechanics" -->
-  <xacro:include filename="$(find mav_tunnel_nav)/urdf/parts/rotors_custom/iris.xacro" />
+  <xacro:include filename="$(find ign_gazebo_prac)/urdf/parts/rotors_custom/iris.xacro" />
 
   <!-- Instantiate a controller. -->
   <xacro:controller_plugin_macro namespace="${namespace}" imu_sub_topic="imu" />
@@ -11,7 +11,7 @@
   <!-- Mount an ADIS16448 IMU. -->
   <!--<xacro:default_imu namespace="${namespace}" parent_link="${namespace}/base_link" />-->
   <!-- Mount a generic IMU simulated by Gazebo. -->
-  <xacro:include filename="$(find mav_tunnel_nav)/urdf/parts/imu/imu.urdf.xacro" />
+  <xacro:include filename="$(find ign_gazebo_prac)/urdf/parts/imu/imu.urdf.xacro" />
   <xacro:imu_sensor link_name="${namespace}/base_link"/>
 
   <!-- Generic odometry -->

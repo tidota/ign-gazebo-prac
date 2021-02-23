@@ -5,7 +5,7 @@
       <xacro:property name="M_PI" value="3.1415926535897932" />
 
       <!-- ray sensors -->
-      <xacro:include filename="$(find mav_tunnel_nav)/urdf/parts/range/range1ray.urdf.xacro" />
+      <xacro:include filename="$(find ign_gazebo_prac)/urdf/parts/range/range1ray.urdf.xacro" />
       <!-- front -->
       <xacro:sonar_sensor name="ray_front" parent="${parent_link}" ros_topic="range_front" update_rate="${rate}" min_range="${min}" max_range="${max}" field_of_view="${ray_fov*M_PI/180}" ray_count="1">
         <origin xyz="${offX_front} 0.0 ${offZ_horizon1}" rpy="0 0 0" />
