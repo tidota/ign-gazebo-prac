@@ -38,6 +38,10 @@ Seems like plugins must be listed in the world file and URDF cannot have them.
 
 | old | new |
 | `libgazebo_ros_imu_sensor.so` | `libignition-gazebo-imu-system.so` |
+| `libgazebo_ros_range.so` | ??? |
+
+Ray sensor is not implemented yet and needs to be substitute by gpu_lidar...
+The topic looks different? And it runs so slow (RTF=0.03?)
 
 ## To spawn a model from ROS param
 
