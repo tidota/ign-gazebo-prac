@@ -30,6 +30,15 @@ _Because it is a burdensome to replace each package name with another in several
 find . -type f -exec sed -i 's/mav_tunnel_nav/ign_gazebo_prac/g' {} \;
 ```
 
+## To replace plugins
+https://ignitionrobotics.org/docs/citadel/comparison
+https://ignitionrobotics.org/docs/citadel/sensors
+
+Seems like plugins must be listed in the world file and URDF cannot have them.
+
+| old | new |
+| `libgazebo_ros_imu_sensor.so` | `libignition-gazebo-imu-system.so` |
+
 ## To spawn a model from ROS param
 
 ```
@@ -122,3 +131,7 @@ well, UDP tunnel through NAT for arbitrary port #s may be impossible...
 
 The only possible way may be remote desktop while the response is really bad.
 
+## found on 2/14/2021
+It actually works if I wait for about 10 seconds with some error messages.
+Apparently a UDP packet is used for the very beginning part which is not
+important for the main process?

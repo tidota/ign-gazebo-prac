@@ -12,7 +12,7 @@
   <!--<xacro:default_imu namespace="${namespace}" parent_link="${namespace}/base_link" />-->
   <!-- Mount a generic IMU simulated by Gazebo. -->
   <xacro:include filename="$(find ign_gazebo_prac)/urdf/parts/imu/imu.urdf.xacro" />
-  <xacro:imu_sensor link_name="${namespace}/base_link"/>
+  <xacro:imu_sensor link_name="${namespace}/base_link" topic="${namespace}/imu"/>
 
   <!-- Generic odometry -->
   <xacro:odometry_plugin_macro
