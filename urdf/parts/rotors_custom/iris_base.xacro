@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <robot name="iris" xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:include filename="$(find rotors_description)/urdf/component_snippets.xacro" />
+  <xacro:include filename="$(find ign_gazebo_prac)/urdf/parts/rotors_custom/component_snippets.xacro" />
   <!-- Instantiate iris "mechanics" -->
   <xacro:include filename="$(find ign_gazebo_prac)/urdf/parts/rotors_custom/iris.xacro" />
 

@@ -1,0 +1,217 @@
+<?xml version="1.0" ?>
+
+<robot name="xacro_properties" xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- specify the coloar in URDF to Ignition: https://answers.ros.org/question/275555/how-to-use-custom-ogre-materials-in-urdf-in-ros-indigo-that-displays-in-gazebo/ -->
+
+  <!-- Init colour -->  
+  <material name="black">
+      <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+  <xacro:macro name="color_black" params="reference">
+    <gazebo reference="${reference}">
+      <visual>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </gazebo>
+  </xacro:macro>
+
+  <material name="dark">
+    <color rgba="0.3 0.3 0.3 1.0"/>
+  </material>
+  <xacro:macro name="color_dark" params="reference">
+    <gazebo reference="${reference}">
+      <visual>
+        <material>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.3 0.3 0.3 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </gazebo>
+  </xacro:macro>
+
+  <material name="light_black">
+    <color rgba="0.4 0.4 0.4 1.0"/>
+  </material>
+  <xacro:macro name="color_light_black" params="reference">
+    <gazebo reference="${reference}">
+      <visual>
+        <material>
+          <ambient>0.4 0.4 0.4 1</ambient>
+          <diffuse>0.4 0.4 0.4 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </gazebo>
+  </xacro:macro>
+
+  <material name="blue">
+    <color rgba="0.0 0.0 0.8 1.0"/>
+  </material>
+  <xacro:macro name="color_blue" params="reference">
+    <gazebo reference="${reference}">
+      <visual>
+        <material>
+          <ambient>0 0 0.8 1</ambient>
+          <diffuse>0 0 0.8 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </gazebo>
+  </xacro:macro>
+
+  <material name="green">
+    <color rgba="0.0 0.8 0.0 1.0"/>
+  </material>
+  <xacro:macro name="color_green" params="reference">
+    <gazebo reference="${reference}">
+      <visual>
+        <material>
+          <ambient>0 0.8 0 1</ambient>
+          <diffuse>0 0.8 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </gazebo>
+  </xacro:macro>
+
+  <material name="grey">
+    <color rgba="0.5 0.5 0.5 1.0"/>
+  </material>
+  <xacro:macro name="color_grey" params="reference">
+    <gazebo reference="${reference}">
+      <visual>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </gazebo>
+  </xacro:macro>
+
+  <material name="orange">
+    <color rgba="${255/255} ${108/255} ${10/255} 1.0"/>
+  </material>
+  <xacro:macro name="color_orange" params="reference">
+    <gazebo reference="${reference}">
+      <visual>
+        <material>
+          <ambient>${255/255} ${108/255} ${10/255} 1</ambient>
+          <diffuse>${255/255} ${108/255} ${10/255} 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </gazebo>
+  </xacro:macro>
+
+  <material name="brown">
+    <color rgba="${222/255} ${207/255} ${195/255} 1.0"/>
+  </material>
+  <xacro:macro name="color_brown" params="reference">
+    <gazebo reference="${reference}">
+      <visual>
+        <material>
+          <ambient>${222/255} ${207/255} ${195/255} 1</ambient>
+          <diffuse>${222/255} ${207/255} ${195/255} 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </gazebo>
+  </xacro:macro>
+
+  <material name="red">
+    <color rgba="0.8 0.0 0.0 1.0"/>
+  </material>
+  <xacro:macro name="color_red" params="reference">
+    <gazebo reference="${reference}">
+      <visual>
+        <material>
+          <ambient>0.8 0 0 1</ambient>
+          <diffuse>0.8 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </gazebo>
+  </xacro:macro>
+
+  <material name="white">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+  <xacro:macro name="color_white" params="reference">
+    <gazebo reference="${reference}">
+      <visual>
+        <material>
+          <ambient>1.0 1.0 1.0 1</ambient>
+          <diffuse>1.0 1.0 1.0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="color_select" params="reference color">
+    <gazebo reference="${reference}">
+      <visual>
+        <material>
+          <xacro:if value="${color == 'black'} or ${color == 'Black'}">
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </xacro:if>
+          <xacro:if value="${color == 'white'} or ${color == 'White'}">
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+          </xacro:if>
+          <xacro:if value="${color == 'red'} or ${color == 'Red'}">
+            <ambient>0.8 0 0 1</ambient>
+            <diffuse>0.8 0 0 1</diffuse>
+          </xacro:if>
+          <xacro:if value="${color == 'green'} or ${color == 'Green'}">
+            <ambient>0 0.8 0 1</ambient>
+            <diffuse>0 0.8 0 1</diffuse>
+          </xacro:if>
+          <xacro:if value="${color == 'blue'} or ${color == 'Blue'}">
+            <ambient>0 0 0.8 1</ambient>
+            <diffuse>0 0 0.8 1</diffuse>
+          </xacro:if>
+          <xacro:if value="${color == 'orange'} or ${color == 'Orange'}">
+            <ambient>${255/255} ${108/255} ${10/255} 1</ambient>
+            <diffuse>${255/255} ${108/255} ${10/255} 1</diffuse>
+          </xacro:if>
+          <xacro:if value="${color == 'brown'} or ${color == 'Brown'}">
+            <ambient>${222/255} ${207/255} ${195/255} 1</ambient>
+            <diffuse>${222/255} ${207/255} ${195/255} 1</diffuse>
+          </xacro:if>
+          <xacro:if value="${color == 'grey'} or ${color == 'Grey'}">
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </xacro:if>
+          <xacro:if value="${color == 'dark'} or ${color == 'Dark'}">
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.3 0.3 0.3 1</diffuse>
+          </xacro:if>
+          <xacro:if value="${color == 'light_black'} or ${color == 'Light_Black'}">
+            <ambient>0.4 0.4 0.4 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </xacro:if>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </gazebo>
+  </xacro:macro>
+</robot>
