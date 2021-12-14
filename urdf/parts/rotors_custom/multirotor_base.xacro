@@ -149,11 +149,6 @@
     <!--<gazebo reference="${robot_namespace}/rotor_${motor_number}">
       <material>Gazebo/${color}</material>
     </gazebo>-->
-    <xacro:if value="${color == 'Red'}">
-      <xacro:color_red reference="${robot_namespace}/rotor_${motor_number}"/>
-    </xacro:if>
-    <xacro:if value="${color == 'Blue'}">
-      <xacro:color_blue reference="${robot_namespace}/rotor_${motor_number}"/>
-    </xacro:if>
+    <xacro:color_select reference="${robot_namespace}/rotor_${motor_number}" color="${color}"/>
   </xacro:macro>
 </robot>

@@ -168,43 +168,43 @@
     <gazebo reference="${reference}">
       <visual>
         <material>
-          <xacro:if value="${color == 'black'} or ${color == 'Black'}">
+          <xacro:if value="${color == 'black' or color == 'Black'}">
             <ambient>0 0 0 1</ambient>
             <diffuse>0 0 0 1</diffuse>
           </xacro:if>
-          <xacro:if value="${color == 'white'} or ${color == 'White'}">
+          <xacro:if value="${color == 'white' or color == 'White'}">
             <ambient>1 1 1 1</ambient>
             <diffuse>1 1 1 1</diffuse>
           </xacro:if>
-          <xacro:if value="${color == 'red'} or ${color == 'Red'}">
+          <xacro:if value="${color == 'red' or color == 'Red'}">
             <ambient>0.8 0 0 1</ambient>
             <diffuse>0.8 0 0 1</diffuse>
           </xacro:if>
-          <xacro:if value="${color == 'green'} or ${color == 'Green'}">
+          <xacro:if value="${color == 'green' or color == 'Green'}">
             <ambient>0 0.8 0 1</ambient>
             <diffuse>0 0.8 0 1</diffuse>
           </xacro:if>
-          <xacro:if value="${color == 'blue'} or ${color == 'Blue'}">
+          <xacro:if value="${color == 'blue' or color == 'Blue'}">
             <ambient>0 0 0.8 1</ambient>
             <diffuse>0 0 0.8 1</diffuse>
           </xacro:if>
-          <xacro:if value="${color == 'orange'} or ${color == 'Orange'}">
+          <xacro:if value="${color == 'orange' or color == 'Orange'}">
             <ambient>${255/255} ${108/255} ${10/255} 1</ambient>
             <diffuse>${255/255} ${108/255} ${10/255} 1</diffuse>
           </xacro:if>
-          <xacro:if value="${color == 'brown'} or ${color == 'Brown'}">
+          <xacro:if value="${color == 'brown' or color == 'Brown'}">
             <ambient>${222/255} ${207/255} ${195/255} 1</ambient>
             <diffuse>${222/255} ${207/255} ${195/255} 1</diffuse>
           </xacro:if>
-          <xacro:if value="${color == 'grey'} or ${color == 'Grey'}">
+          <xacro:if value="${color == 'grey' or color == 'Grey'}">
             <ambient>0.5 0.5 0.5 1</ambient>
             <diffuse>0.5 0.5 0.5 1</diffuse>
           </xacro:if>
-          <xacro:if value="${color == 'dark'} or ${color == 'Dark'}">
+          <xacro:if value="${color == 'dark' or color == 'Dark'}">
             <ambient>0.3 0.3 0.3 1</ambient>
             <diffuse>0.3 0.3 0.3 1</diffuse>
           </xacro:if>
-          <xacro:if value="${color == 'light_black'} or ${color == 'Light_Black'}">
+          <xacro:if value="${color == 'light_black' or color == 'Light_Black'}">
             <ambient>0.4 0.4 0.4 1</ambient>
             <diffuse>0.4 0.4 0.4 1</diffuse>
           </xacro:if>
