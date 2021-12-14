@@ -1,6 +1,18 @@
-<?xml version="1.0"?>
+
 <launch>
   <arg name="sdf" default="$(find ign_gazebo_prac)/world/myworld.sdf"/>
+
+  <!-- robot description -->
+  <param name="robot_description" command="
+    $(find xacro)/xacro '$(find ign_gazebo_prac)/urdf/iris/iris_depthcam.xacro'
+    enable_logging:=false
+    enable_ground_truth:=false
+    enable_mavlink_interface:=false
+    log_file:=robot1
+    wait_to_record_bag:=false
+    mav_name:=robot1
+    namespace:=robot1"
+  />
 
   <!-- start ignition gazebo server -->
   <include file="$(find ign_gazebo_prac)/launch/start_server.launch">
@@ -9,4 +21,7 @@
 
   <!-- start ignition gazebo gui -->
   <include file="$(find ign_gazebo_prac)/launch/start_gui.launch"/>
+
+  <!-- spawn the robot -->
+  <node pkg="ros_ign_gazebo" type="create" name="robot_spawner" output="screen" args="-world myworld -param robot_description"/>
 </launch>
