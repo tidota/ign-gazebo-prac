@@ -30,7 +30,7 @@ find_package(catkin REQUIRED COMPONENTS
 file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include)
 
 #find_package(gazebo REQUIRED)
-find_package(ignition-transport4 REQUIRED)
+find_package(ignition-transport8 REQUIRED)
 
 # PCL
 find_package(PCL 1.7 REQUIRED)
